@@ -1,5 +1,7 @@
 package com.example.ciclos_04;
 
+import java.util.Arrays;
+
 public class CiclosNumber {
 
     public void ejemplos(){
@@ -72,6 +74,51 @@ public class CiclosNumber {
             }
             System.out.println("i: "+i+" Carácter: "+texto.charAt(i)+" Contador: "+count);
         }
+
+        int [] pares= new int [100];
+        //{ 2,4,6,8, , , , , , , , , , , , , , , , , , , , , , , }
+        int flag=0;
+        //Ciclo que llena el arreglo con los 100 primeros números pares
+        for (int i=0;i<pares.length;i++){
+            flag=flag+2;
+            pares[i]=flag;
+            System.out.println("i: "+i+" Flag: "+flag+ " valor:"+pares[i]);
+        }
+        System.out.println(Arrays.toString(pares));
+        int [] impares= new int [100];
+        //{ 2,4,6,8, , , , , , , , , , , , , , , , , , , , , , , }
+        int flag2=1;
+        //Ciclo que llene el arreglo con los 100 primeros números impares
+        for (int i=0;i<impares.length;i++){
+            impares[i]=flag2;
+            System.out.println("i: "+i+" Flag: "+flag2+ " valor:"+impares[i]);
+            flag2=flag2+2;
+        }
+        System.out.println(Arrays.toString(impares));
+
+        flag2=0;
+        for (int i=0;i<impares.length;i++){
+            flag2=flag2+1;
+
+            if (flag2%2 !=0){
+                impares[i]=flag2;
+            } else {
+                flag2=flag2+1;
+                impares[i]=flag2;
+            }
+
+            System.out.println("i: "+i+" Flag: "+flag2+ " valor:"+impares[i]);
+        }
+        System.out.println(Arrays.toString(impares));
+
+        flag=-1;
+        //Ciclo que llena el arreglo con los 100 primeros números pares
+        for (int i=0;i<impares.length;i++){
+            flag=flag+2;
+            impares[i]=flag;
+            System.out.println("i: "+i+" Flag: "+flag+ " valor:"+impares[i]);
+        }
+        System.out.println(Arrays.toString(impares));
 
 
     }
